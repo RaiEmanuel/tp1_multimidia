@@ -1,0 +1,317 @@
+<!doctype html>
+  <html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS bundle -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Fa Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <header>
+      <div class = "animate__animated animate__bounceInUp" id="background-main" style = "width: 100%;height: 100vh;position: relative;overflow: hidden">
+        <div style = "position: absolute;top: 0;left: 0;width: 100%;height: 10%;z-index: 2;">
+          <nav class="animate__animated animate__fadeInRight navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#"><i class="fa fa-suitcase" aria-hidden="true"></i></a>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastre-se</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Promoções <span class="badge bg-secondary">4</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cupons de desconto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style = "font-weight: bold;" onclick="playOcean()" class="nav-link" href="#" tabindex="-1" aria-disabled="true"> <i class="fa fa-play" aria-hidden="true"></i> Tocar áudio</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="O que procura?" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div style = "z-index: 1; position: absolute; left: 50%;top: 50%;color: white; font-family: BigJohn; font-size: 10em;transform-box: border-box; transform: translateX(-50%) translateY(-50%);" class="animate__animated animate__flash">
+          TRAVEL.
+        </div>
+        <video autoplay muted loop style = "position: absolute; width: 100%;object-fit: cover;z-index: 0;">
+          <source src="img/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </header>
+      <content>
+        <section id = "promocoes">
+          <div class="container-fluid" style = "background: #222;">
+            <div class="row">
+              <h2 class="text-center" style = "margin-top: 5vh;margin-bottom: 5vh;color: white">Promoções</h2>
+            </div>
+            <div class="row" style = "color: white;">
+              <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div  class="carousel-item active" data-bs-interval="10000">
+                    <div style = "height: 100vh;">
+                      <img syle = "object-fit: cover; " src="img/germany.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Alemanha</h3>
+                      <p>Venha conhecer a diversão da Oktoberfest</p>
+                      <h3 style = "color: gold;">R$12.999,99</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <div style = "height: 100vh;">
+                      <img syle = "object-fit: cover; " src="img/aurora.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Suécia</h3>
+                      <p>A aurora boreal é uma das estrelas do inverno sueco. Você não irá se arrepender.</p>
+                      <h3 style = "color: gold;">R$19.999,99</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style = "height: 100vh;">
+                      <img syle = "object-fit: cover; " src="img/santorini.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Grécia</h3>
+                      <p>Santorini é um dos pontos turísticos mais belos do país.</p>
+                      <h3 style = "color: gold;">R$15.999,99</h3>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id = "benefits">
+          <div class="container">
+            <div class="row" style = "">
+              <h2 style = "color: rgb(108, 117, 125); margin-bottom: 2vh; margin-top: 5vh;">Benefícios de viajar com a <b>TRAVEL.</b></h2>
+            </div>
+            <div class="row" style = "margin-bottom: 5vh;">
+              <div class="col">
+                <div class="card" style = "box-shadow: 0 0 15px 1px #BBB;">
+                  <center>
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_veqkjqvf.json"  background="transparent"  speed="1" style="width: 300px; height: 300px;" loop  autoplay></lottie-player>
+                  </center>
+                  <div class="card-body" style = "height: 30vh">
+                    <h5 class="card-title">Qualquer lugar</h5>
+                    <p class="card-text">Nossa empresa permite você viajar para qualquer lugar, país ou cidade de seu interesse.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Atualizado há 3 minutos</small>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 -->
+              <div class="col">
+                <div class="card" style = "box-shadow: 0 0 15px 1px #BBB;">
+                  <center>
+                    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_dkamovet.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                  </center>
+                  <div class="card-body" style = "height: 30vh">
+                    <h5 class="card-title">Praticidade</h5>
+                    <p class="card-text">Deixamos você a um clique de distância de marcar uma viagem inesquecível. Tudo agendado e pago através do celular: sem sair de casa.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Atualizado há 3 minutos</small>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="col">
+                <div class="card" style = "box-shadow: 0 0 15px 1px #BBB;">
+                  <center>
+                    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_mckhl1dr.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                  </center>
+                  <div class="card-body" style = "height: 30vh">
+                    <h5 class="card-title">Segurança</h5>
+                    <p class="card-text">Prezamos pela segurança e integridade dos nossos clientes. Servidores robustos e seguros contra ataques, anonimato e muito mais.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Atualizado há 3 minutos</small>
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 -->
+            </div>
+          </div><!-- container -->
+        </section>
+
+        <section id = "duvidas">
+          <div class="container-fluid" style = "background: rgb(108, 117, 125)">
+            <div class="row">
+              <div class="offset-4 col-4">
+                <h2 style = "color: white; padding-top: 2em;padding-bottom: 1em;" class = "text-center">Principais dúvidas</h2>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-3 col-6">
+                <div class="accordion" id="accordionExample" style = "padding-bottom: 2em;">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Como manter o anonimato
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Para criar uma conta anônima é  muito simples. Basta marcar o botão "Anonymous" no cadastro de sua conta. O seu email não será divulgado para outros usuários e seu nome será abreviado com '*'. Pronto, você está oculto(a) em nossa plataforma. 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Desativar conta
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       Para desativar sua conta é muito fácil: Configurações -> Perfil -> Minha conta -> Desativar minha conta -> OK.
+                     </div>
+                   </div>
+                 </div>
+             </div>  
+           </div>
+         </div>
+       </div>
+     </section>
+   </content>
+   <footer>
+    <div class="container-fluid" style = "background: #222;">
+      <div class="row"><!-- main row -->
+        <div class="col-6"><!-- col form -->
+          <div class="row">
+           <h2 class = "text-center" style = "padding: 0.5em">Trabalhe conosco!</h2>
+         </div>
+         <div class="row">
+          <form class = "offset-3 col-6 justify-content-center" style="color: white; padding: 1em">
+            <div class="form-row">
+              <div class="col-12 mb-3">
+                <label for="validationDefault01">Primeiro Nome</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Primeiro nome" required>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="validationDefault02">Úlitmo Nome</label>
+                <input type="text" class="form-control" id="validationDefault02" placeholder="Sobrenome" required>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="validationDefaultUsername">Email</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationDefaultUsername" placeholder="email" aria-describedby="inputGroupPrepend2" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Cadastrar-se <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+        </div>
+      </div><!-- col form -->
+      <div class="col-6"><!-- col redes sociais -->
+        <div class="row"><!-- row title redes sociais -->
+          <h2 class = "text-center" style = "padding: 0.5em">Nossas redes sociais</h2>
+        </div><!-- /row title redes sociais -->
+
+        <div class="row social" style=""><!-- row instagram -->
+          <div class="col-2">
+            <img class = "offset-2 col-8" src="img/instagram.svg" style = "color: white;">
+          </div>
+          <div class="col-10" >
+            <h3 class = "align-middle">@travel.</h3>
+          </div>
+        </div><!-- /row instagram -->
+
+        <div class="row social"><!-- row linkedin -->
+          <div class="col-2">
+            <img class = "offset-2 col-8" src="img/linkedin.svg" style = "color: white;">
+          </div>
+          <div class="col-10">
+            <h3 class = "align-middle">Travel. Official</h3>
+          </div>
+        </div><!-- /row linkedin -->
+
+        <div class="row social"><!-- row youtube -->
+          <div class="col-2">
+            <img class = "offset-2 col-8" src="img/youtube.svg" style = "color: white;">
+          </div>
+          <div class="col-10">
+            <h3 class = "align-middle">@travel.</h3>
+          </div>
+        </div><!-- /row youtube -->
+
+        <div class="row social"><!-- row telegram -->
+          <div class="col-2">
+            <img class = "offset-2 col-8" src="img/telegram.svg" style = "color: white;">
+          </div>
+          <div class="col-10" >
+            <h3 class = "align-middle">+55 (11) 4002-8922</h3>
+          </div>
+        </div><!-- /row telegram -->
+
+      </div><!-- /col redes sociais -->
+    </div><!-- /main row -->
+    <div class="row" style = "background: #222;  ">
+      <h5 class = "text-center" style = "color: white;margin-top: 5vh;">TRAVEL., 2021 @ Multimídia</h5>
+      <h5 class = "text-center" style = "color: white;margin-top: 1vh;">Música: Alok, Zeeba and IRO - Ocean (Official Music Video) - Spinnin' Records - YouTube </h5>
+      <a href="https://www.youtube.com/watch?v=Cfj4fd53--s" class="text-center btn btn-primary offset-5 col-2" style = ";margin-top: 1vh;color: white;text-decoration: none;">Acessar Música <i class="fa fa-music" aria-hidden="true"></i></a>
+      <h5 class = "text-center" style = "color: white;margin-bottom: 5vh;margin-top: 1vh;">Este site é apenas para uso didático</h5>
+    </div>
+  </div><!-- /container fuild -->
+  
+</footer>
+
+<script type="text/javascript" src = "js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<script type="text/javascript">
+  function playOcean(){
+    var audioElement = new Audio('audio/ocean.mp3');
+    audioElement.play();
+  }
+</script>
+
+</html>
